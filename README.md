@@ -1,1 +1,1 @@
-# LandingPage_Theraphy
+# LandingPage-Theraphy
