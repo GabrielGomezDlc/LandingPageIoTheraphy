@@ -6,9 +6,14 @@
 }
 
 
-ul, li, nav
+li, nav
 {
     list-style: none;
+
+}
+
+ul {
+    list-style-type: disc; /* Agrega viñetas en forma de puntos sólidos */
 
 }
 
@@ -20,12 +25,8 @@ a
 
 }
 
-a:hover
-{
-
-    background-color: #003A79;
-    padding: 3px;
-    border-radius: 5px;
+a:hover {
+    font-weight: bold;
 }
 
 
@@ -58,6 +59,7 @@ a.btn:hover
 .box {
     width: 1200px;
     display: flex;
+    padding-left: 50px;
 }
 
 
@@ -80,6 +82,7 @@ header .name
     font-size: 34px;
     letter-spacing: 1.25px;
     font-weight: bold;
+    margin-bottom: 15px;
 }
 
 header .nav-header
@@ -102,6 +105,10 @@ header .nav-header
 
 }
 
+.logo2 img{
+    width: 200px;
+    height: 20px;
+}
 
 .nav-toggle {
     color: white;
@@ -252,68 +259,186 @@ header nav li
 
 
 /*HERO SECTION*/
-.hero-section{
-    background-color: #0069D0;
-}
-
-.hero-section .left{
-    display: flex;
-    align-items: center;
-    color: white;
-    min-width: 50%;
-    margin-left: 1vw;
-}
-
-.hero-section .left .title{
-    font-size: 3vw;
-    font-weight: 700;
-    line-height: 1.1em;
-}
-
-.hero-section .left p{
-    margin: 1.5vw 0px;
-    font-size: 1.8vw;
-}
-
-.hero-section .left a{
-    background-color: #003A79;
-    color: white;
-    padding: 1.2vw 6vw;
-    border-style: none;
-    border-radius: 0.3vw;
-    font-size: 1.8vw;
-    display: inline-block;
-    text-decoration: none;
-}
-
+/* Estilo para la sección hero completa */
 .hero-section {
+    background-image: url("../../assets/images/hero_image.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
     min-height: 45vw;
-}
-
-.hero-section .right{
-    min-width: 50%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start; /* Alinea los elementos a la izquierda */
 }
 
-.hero-section .right img{
-    max-width: 35vw;
+/* Ajusta el estilo de la tarjeta */
+.hero-card{
+    background-color: #ffffff;
+    border-radius: 30px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    text-align: left;
+    width: 780px;
+
+}
+
+.card-title {
+    font-size: 60px;
+    font-weight: 800;
+    margin: 0;
+    color: #000000;
+}
+
+.card-description {
+    font-size: 20px;
+    font-weight: normal;
+    color: #000000;
+    margin-top: 10px;
+}
+
+.btn-rectangular {
+    display: inline-block;
+    padding: 24px 60px;
+    background-color: #007AF0;
+    color: #ffffff;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    font-size: 20px;
+    margin-right: 68%;
+}
+
+.btn-rectangular:hover {
+    background-color: #0055A4; /* Cambia el color de fondo al acercar el mouse */
+    opacity: 0.6; /* Reduce la opacidad al acercar el mouse */
+}
+
+
+/* Consulta de medios para tabletas */
+@media screen and (max-width: 768px) {
+    .hero-card {
+        padding: 10px; /* Ajusta el relleno para dispositivos más pequeños */
+    }
+
+    .card-title {
+        font-size: 24px; /* Tamaño de fuente más pequeño para tabletas */
+    }
+
+    .card-description {
+        font-size: 14px; /* Tamaño de fuente más pequeño para tabletas */
+    }
+
+    .btn-rectangular {
+        padding: 12px 30px; /* Ajusta el padding para tabletas */
+        font-size: 14px; /* Tamaño de fuente más pequeño para tabletas */
+    }
+}
+
+/* Consulta de medios para smartphones */
+@media screen and (max-width: 480px) {
+    .card-title {
+        font-size: 20px; /* Tamaño de fuente más pequeño para smartphones */
+    }
+
+    .card-description {
+        font-size: 12px; /* Tamaño de fuente más pequeño para smartphones */
+    }
+
+    .btn-rectangular {
+        padding: 10px 24px; /* Ajusta el padding para smartphones */
+        font-size: 12px; /* Tamaño de fuente más pequeño para smartphones */
+    }
 }
 
 /*Services Section*/
-#patient-services {
-    margin-top: 40px;
-    margin-bottom: 40px;
+
+#patient-services .container{
+    background: linear-gradient(to bottom, #659ebc 0%, #659ebc 0%, #ffffff 2%); /* Ajusta las posiciones para el degradado */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #cfdff0; /* Establece el color de fondo de respaldo */
 }
 
-#patient-services p {
-    font-size: 1.8vw;
+#patient-services .titles{
+    text-align: center;
 }
+
+#patient-services .titles h1{
+    margin-top: 60px;
+    font-weight: bold;
+    color: #007AF0;
+}
+
+#patient-services .titles h2{
+    font-weight: bold;
+    margin-bottom: 40px;
+    font-size: 40px;
+}
+
+#patient-services .cards-container{
+    max-width: 1500px;
+    border: 4px solid #007AF0; /* Añade un borde de 2 píxeles de ancho y color blanco */
+    border-radius: 15px; /* Aplica bordes redondeados de 20 píxeles */
+    padding: 30px; /* Añade un espacio interno para separar las tarjetas del borde */
+    margin-top: 20px;
+    margin-bottom: 170px;/* Agrega un margen superior para separar los títulos de las tarjetas */
+    display: flex;
+}
+
+#patient-services .card {
+    display: flex; /* Usa flexbox para organizar el contenido */
+    border-radius: 5px; /* Aplica bordes redondeados */
+    padding: 10px; /* Añade un espacio interno para separar los elementos */
+    margin: 29px; /* Agrega margen para separar las tarjetas */
+    align-items: center; /* Alinea verticalmente los elementos */
+    width: 600px;
+    height: 200px;
+    transition: transform 0.3s ease;
+    background-color: #ffffff;
+    border: 1px solid #000000;/* Agregamos una transición de 0.3 segundos en la propiedad 'transform' */
+}
+
+#patient-services .card:hover {
+    transform: scale(1.05); /* Al hacer hover, la tarjeta se agrandará un 5% */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Agregamos una sombra para dar un efecto de elevación */
+}
+
+#patient-services .card-image {
+    flex: 1; /* El espacio disponible se divide entre la imagen y el contenido */
+    display: grid;
+    place-items: center;
+}
+
+#patient-services .card-image img {
+    width: 60%; /* La imagen no se desbordará de la tarjeta */
+    height: 80%; /* Mantiene la proporción de la imagen */
+    margin: auto;
+
+}
+
+#patient-services .card-content {
+    flex: 2; /* El espacio disponible se divide entre el contenido y la imagen */
+
+}
+
+#patient-services .card-title {
+    font-size: 22px; /* Estilo del título */
+    margin-right: 56px;
+
+}
+
+#patient-services .card-description {
+    font-size: 16px;
+    margin-right: 25px;/* Estilo de la descripción */
+
+}
+
+
 
 .feature-title {
     text-align: left;
-    margin-left: 0vw;
 }
 
 
@@ -349,7 +474,7 @@ section h1.title
 
 
 .services h3{
-    font-size: 2.8vw;
+    font-size:  30px;
     margin-bottom: 12px;
     font-weight:bold;
     color: #3C5BA9;
@@ -363,12 +488,7 @@ section h1.title
     text-align: left;
 }
 
-.feature-services-begin {
-    margin-top: 1.8vw;
-    display: flex;
-    align-items: center;
-    margin-bottom: 5vw;
-}
+
 .feature-services-begin-rigth {
     margin-right: 10vw;
     margin-left: 3.5vw;
@@ -397,10 +517,7 @@ section h1.title
 /*About Product**/
 .about-product{
     background-color: #0069D0;
-}
-
-.about-product {
-    height: 40vw;
+    height: 900px;
 }
 
 .about-product .right{
@@ -434,15 +551,17 @@ section h1.title
     font-size: 1.8vw;
 }
 
-#about-product .left a{
-    background-color: #003A79;
-    color: white;
-    padding: 1.2vw 6vw;
-    border-style: none;
-    border-radius: 0.3vw;
-    font-size: 1.8vw;
-    display: inline-block;
+
+#about-product .btn-rectangular{
+
+    background-color: rgba(207, 223, 240, 0.47);
+    color: #ffffff;
+    border-radius: 50px;
     text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 110px;
+    font-size: 20px;
 }
 
 @media (max-width: 800px) and (min-width:200px) {
@@ -461,229 +580,195 @@ section h1.title
 }
 
 /*Physiotherapist section**/
-.physiotherapist{
-    background-color: white;
+
+#physiotherapist-services {
+    background-color: rgb(255, 255, 255);
+    height: 48vw;
+    padding-top: 110px;
 }
 
-.physiotherapist {
-    height: 50vw;
-    margin-top: 1vw;
-}
 
-.physiotherapist .right{
+
+#physiotherapist-services .right{
     min-width: 50%;
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 
-.physiotherapist .right img{
-    margin-right: 10vw;
-    margin-left: 12vw;
-    height: 30vw;
+#physiotherapist-services .right img{
+    margin-right: 15%;
+    margin-left: 10%;
+    height: 600px;
+    border-radius: 40px;
 }
 
-.physiotherapist .left{
+#physiotherapist-services .left{
 
     display: flex;
-    align-items: center;
+
     color: black;
     min-width: 45%;
     margin-left: 2vw;
     margin-right: 0vw;
 }
 
-.physiotherapist .left .title{
+#physiotherapist-services .left .title{
 
-    font-size: 3vw;
+    font-size: 45px;
     font-weight: 700;
     line-height: 1.1em;
 }
 
-.physiotherapist .left p{
-    margin: 1.5vw 0px;
-    font-size: 1.8vw;
-}
 
-.physiotherapist .left a{
-    background-color: #003A79;
-    color: white;
-    padding: 1.2vw 12vw;
-    border-style: none;
-    border-radius: 0.3vw;
-    font-size: 1.8vw;
-    display: inline-block;
+
+#physiotherapist-services .btn-rectangular{
+    padding:25px 60px;
+    background-color: #007AF0;
+    color: #ffffff;
+    border-radius: 50px;
     text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 100px;
+    margin-left: 60px;
+
+}
+
+#physiotherapist-services .btn-rectangular:hover {
+    background-color: #0055A4; /* Cambia el color de fondo al acercar el mouse */
+    opacity: 0.6; /* Reduce la opacidad al acercar el mouse */
 }
 
 
-#physiotherapist-services {
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
 
-#physiotherapist-services p {
-    font-size: 1.8vw;
-}
-/*.physiotherapist{
-    background-color:white;
-}
 
-.physiotherapist .left{
+/* Estilos para los elementos expandibles */
+.expanding-section {
+    margin-top: 20px;
     display: flex;
-    align-items: center;
-    min-width: 50%;
+    flex-direction: column;
 }
 
-.physiotherapist .left .title{
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 1.1em;
-}
-
-.physiotherapist .left p{
-    margin: 20px 0px
-}
-
-.physiotherapist .left a{
-    background-color: #003A79;
-    color: white;
-    padding: 15px 70px;
-    border-style: none;
+.expanding-item {
+    margin-top: 20px;
+    padding: 10px;
     border-radius: 5px;
-    font-size: 15px;
-    display: inline-block;
-    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
 }
 
-.physiotherapist {
-    min-height: 600px;
+
+.expanding-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Alinea verticalmente el contenido en el centro */
+    cursor: pointer;
+
 }
 
-.physiotherapist .right{
-    min-width: 50%;
-    display:p flex;
-    align-items: center;
+.expand-button {
+    background-color: #007AF0;
+    color: #ffffff;
+    border-radius: 50%;
+    border: none;
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    display: flex;
     justify-content: center;
+    padding-top: 5px;
+    cursor: pointer;
+
 }
 
-.physiotherapist .right img{
-    max-width: 500px;
-    height:30vw
+
+.expand-button:hover {
+    background-color: #0055A4; /* Cambia el color de fondo al acercar el mouse */
+    opacity: 0.6; /* Reduce la opacidad al acercar el mouse */
 }
 
+.expanding-content {
+    max-height: 0;
+    overflow: hidden;
+    background-color: rgba(207, 223, 240, 0.47); /* Establece el color de fondo deseado */
+}
 
+.expanded {
+    max-height: 200px; /* Establece la altura máxima deseada para la expansión */
+    margin-top: 20px;
+    padding: 25px;
+}
 
- */
+#physiotherapist-services li{
+    list-style: inherit;
+}
+
 
 /*Testimonials*/
 
 #testimonials h1 {
-    text-transform: capitalize;
-    font-family: ibm-plex-sans, sans-serif;
     text-align: center;
-    padding-top: 40px;
-    margin-bottom: 5vw;
-    color: white;
+    padding-top: 60px;
+    margin-bottom: 80px;
+    color: #007AF0;
+    font-weight: bold;
+    font-size: 40px;
 }
-
 #testimonials {
-    background-color: #3C5BA9;
-    height: 650px;
+    text-align: center;
+    background-color: #f2f2f2;
+    height: 900px;
 }
+
 #testcards {
-
-    box-sizing: border-box;
-    font-family: ibm-plex-sans, sans-serif;
-
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
-
 }
-.slide-container{
-    width: 40vw;
-    height: 40vw;
 
-    padding: 40px 0;
-}
-.slide-content{
-    margin: 0 40px;
+.testimonial-card {
+    background-image: url("../../assets/images/review-background.png");
+    background-size: 80px;
+    background-repeat: no-repeat;
+    background-position-x: 40px;
+    background-position-y: 20px;
+    width: calc(40% - 10px);
+    height: 250px;/* Dos columnas en pantalla grande, con espacio entre ellas */
+    margin: 20px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    border-radius: 25px;
-}
-.card{
-    border-radius: 25px;
-    background-color: #FFF;
-}
-.image-content,
-.card-content{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 14px;
-}
-.image-content{
     position: relative;
-    row-gap: 5px;
-    padding: 25px 0;
 }
-.overlay{
+
+.testimonial-content {
     position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #4070F4;
-    border-radius: 25px 25px 0 25px;
+    left: 35px; /* Alinea el texto a 40px desde el borde izquierdo */
+    top: 90px;
+    margin-right: 30px;
 }
-.overlay::before,
-.overlay::after{
-    content: '';
-    position: absolute;
-    right: 0;
-    bottom: -40px;
-    height: 40px;
-    width: 40px;
-    background-color: #4070F4;
-}
-.overlay::after{
-    border-radius: 0 25px 0 0;
-    background-color: #FFF;
-}
-.card-image{
-    position: relative;
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    background: #FFF;
-    padding: 3px;
-}
-.card-image .card-img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid #4070F4;
-}
-.name{
-    font-size: 18px;
-    font-weight: 500;
-    color: #333;
+
+.testimonial-content p {
+    font-size: 20px;
     margin-bottom: 10px;
 }
-.description{
-    font-size: 20px;
-    color: #707070;
-    text-align: center;
+
+.testimonial-name {
+    font-weight: bold;
+    margin-right: 310px;
+    color: #007AF0;
 }
 
-.swiper-pagination-bullet{
-    background-color: #6E93f7;
-    opacity: 1;
-}
-.swiper-pagination-bullet-active{
-    background-color: #4070F4;
+.testimonial-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 
 @media screen and (max-width: 768px) {
@@ -699,68 +784,77 @@ section h1.title
 }
 
 /*About the TEam*/
-#about-team {
+#about-the-team {
+    background-color: #007AF0;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#about-the-team h1{
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+}
+
+#about-the-team h2{
+    font-size: 25px;
+    color: white;
+    font-weight: normal;
     margin-top: 20px;
+}
+
+.team-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
     margin-bottom: 20px;
-    align-content: center;
-    align-items: center;
 }
 
-#about-team h1 {
-    text-transform: capitalize;
-
-    font-family: ibm-plex-sans, sans-serif;
-    text-align: center;
-    padding-top: 10px;
-    margin-bottom: 25px;
-    color: #3C5BA9;
+.team-card {
+    width: calc(33.33% - 300px);
+    height: 400px;
+    margin: 20px;
+    background-color: #ffffff;
+    border-radius: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
 }
 
-#about-team p {
-    text-align: center;
-    font-family: ibm-plex-sans, sans-serif;
-    font-size: 20px;
-    margin-bottom: 25px;
+
+.team-avatar {
+    width: 230px;
+    height: 250px;
+    padding: 15px;
+    border-radius: 20%;
 }
 
-#about-team img{
-    width: 130px;
-    height: 130px;
+.team-name {
+    font-weight: bold;
+    margin: 0 20px;
+    color: #5b5b5b;
+}
+
+.team-position {
+    margin: 0 20px;
+    color: #007AF0;
+    font-weight: bolder;
+}
+
+.team-social-icons {
+    margin: 10px 20px ;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
-    box-shadow: -2px 9px 13px -1px rgba(0,0,0,0.81);
-    -webkit-box-shadow: -2px 9px 13px -1px rgba(0,0,0,0.81);
-    -moz-box-shadow: -2px 9px 13px -1px rgba(0,0,0,0.81);
+    margin-right: 5px;
+    cursor:pointer;
 }
 
 
-#about-team .team-div{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-h3
-{
-    text-align: center;
-    color: #3C5BA9;
-}
-
-.team-photos{
-}
-.team-photos_top{
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    margin-top: 30px;
-}
-
-.team-photos_bottom{
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    gap: 50px;
-}
 #about-team iframe {
     align-items: center;
     align-self: center;
@@ -788,6 +882,35 @@ h3
         width: 450px;
     }
 }
+
+
+/*ScrollToTop*/
+#scroll-to-top {
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+#scroll-to-top button {
+    width: 45px;
+    height: 45px;
+    background-color: #007AF0;
+    color: #ffffff;
+    border: 2px solid white;
+    border-radius: 50%;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+#scroll-to-top button:hover {
+    background-color: #0055A4;
+}
+
 
 /*Footer*/
 
