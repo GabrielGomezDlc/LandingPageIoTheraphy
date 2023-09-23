@@ -190,16 +190,16 @@ header nav li
 }
 
 
-@media (max-width: 1000px) {
+@media (max-width: 800px)   {
     header {
         padding: 10px 30px;
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1300px)  {
 
     header h2 {
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
 
     a
@@ -316,9 +316,11 @@ header nav li
 
 
 /* Consulta de medios para tabletas */
-@media screen and (max-width: 768px) {
+@media (max-width: 800px) and (min-width:200px) {
     .hero-card {
         padding: 10px; /* Ajusta el relleno para dispositivos más pequeños */
+        width: 300px;
+        margin-left: 50px;
     }
 
     .card-title {
@@ -331,18 +333,26 @@ header nav li
 
     .btn-rectangular {
         padding: 12px 30px; /* Ajusta el padding para tabletas */
-        font-size: 14px; /* Tamaño de fuente más pequeño para tabletas */
+        font-size: 10px; /* Tamaño de fuente más pequeño para tabletas */
+        width: 60px;
     }
 }
 
 /* Consulta de medios para smartphones */
-@media screen and (max-width: 480px) {
-    .card-title {
-        font-size: 20px; /* Tamaño de fuente más pequeño para smartphones */
+@media (max-width: 1300px) and (min-width:800px) {
+    .hero-card {
+        padding: 10px; /* Ajusta el relleno para dispositivos más pequeños */
+        width: 450px;
+        margin-left: 50px;
     }
 
+    .card-title {
+        font-size: 25px; /* Tamaño de fuente más pequeño para smartphones */
+    }
+
+
     .card-description {
-        font-size: 12px; /* Tamaño de fuente más pequeño para smartphones */
+        font-size: 14px; /* Tamaño de fuente más pequeño para smartphones */
     }
 
     .btn-rectangular {
@@ -513,6 +523,60 @@ section h1.title
     height:25vw
 }
 
+/* Estilos para tabletas (ancho de pantalla entre 800px y 1300px) */
+@media screen and (max-width: 1300px) and (min-width: 800px) {
+    #patient-services .cards-container {
+        flex-direction: column; /* Cambia a disposición de columna en tabletas */
+        max-width: 80%; /* Reduzca el ancho máximo */
+        margin-left: auto;
+        margin-right: auto; /* Centra la sección */
+
+    }
+
+    #patient-services .card {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        max-width: none; /* Restablece el ancho máximo */
+        margin: 20px 0; /* Cambia el margen vertical */
+    }
+}
+
+/* Estilos para smartphones (ancho de pantalla menor a 800px) */
+@media screen and (max-width: 800px) {
+    #patient-services .titles h1 {
+        font-size: 32px; /* Tamaño de fuente más pequeño para smartphones */
+        margin-top: 40px; /* Ajusta el margen superior */
+    }
+
+    #patient-services .titles h2 {
+        font-size: 28px; /* Tamaño de fuente más pequeño para smartphones */
+        margin-bottom: 30px; /* Ajusta el margen inferior */
+    }
+
+    #patient-services .cards-container {
+        flex-direction: column; /* Cambia a disposición de columna en smartphones */
+        max-width: 80%; /* Reduzca el ancho máximo */
+        margin-left: auto;
+        margin-right: auto; /* Centra la sección */
+    }
+
+    #patient-services .card {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        max-width: none; /* Restablece el ancho máximo */
+        margin: 20px 0 ; /* Cambia el margen vertical */
+    }
+
+    #patient-services .card-content {
+        text-align: center; /* Centra el contenido en smartphones */
+    }
+
+    #patient-services .card-title {
+        font-size: 22px; /* Tamaño de fuente más pequeño para smartphones */
+    }
+
+    #patient-services .card-description {
+        font-size: 16px; /* Tamaño de fuente más pequeño para smartphones */
+    }
+}
 
 /*About Product**/
 .about-product{
@@ -564,30 +628,92 @@ section h1.title
     font-size: 20px;
 }
 
-@media (max-width: 800px) and (min-width:200px) {
+/* Estilos para tabletas (ancho de pantalla entre 800px y 1300px) */
+@media screen and (max-width: 1300px) and (min-width: 800px) {
+    .about-product{
+        height: 700px;
+    }
+
+    #about-product .left {
+        min-width: 40%; /* Ajusta el ancho mínimo del lado izquierdo */
+        margin-right: 5vw; /* Reduce el margen derecho */
+    }
+
+    #about-product .left .title {
+        font-size: 45px; /* Tamaño de fuente más pequeño para tabletas */
+    }
+
+    #about-product .left p {
+        font-size: 18px; /* Tamaño de fuente más pequeño para tabletas */
+    }
+
+    #about-product .btn-rectangular {
+        width: 90px; /* Reduzca el ancho del botón rectangular */
+        font-size: 16px; /* Tamaño de fuente más pequeño para tabletas */
+    }
+
+    #about-product .right {
+        min-width: 50%; /* Ajusta el ancho mínimo del lado derecho */
+    }
+
     #about-product iframe {
-        height: 150px;
-        width: 200px;
+        height: 400px; /* Ajuste la altura del iframe */
+        width: 500px;
+        margin-right: 80px;
+
     }
 }
-@media (max-width: 1300px) and (min-width:800px) {
-    #about-product iframe {
-        height: 250px;
-        width: 450px;
+
+/* Estilos para smartphones (ancho de pantalla menor a 800px) */
+@media screen and (max-width: 800px) {
+
+    .about-product{
+        height: 630px;
     }
 
+    #about-product .left {
+        min-width: 80%; /* Ajusta el ancho mínimo del lado izquierdo para smartphones */
+        margin-right: 0; /* Elimina el margen derecho */
+    }
 
+    #about-product .left .title {
+        font-size: 35px; /* Tamaño de fuente más pequeño para smartphones */
+    }
+
+    #about-product .left p {
+        font-size: 19px; /* Tamaño de fuente más pequeño para smartphones */
+        margin-right: 50px;
+    }
+
+    #about-product .btn-rectangular {
+        width: 80px; /* Reduzca el ancho del botón rectangular para smartphones */
+        font-size: 14px; /* Tamaño de fuente más pequeño para smartphones */
+    }
+
+    #about-product .right {
+        min-width: 100%; /* Ajusta el ancho mínimo del lado derecho para smartphones */
+    }
+
+    #about-product .box{
+        display: table-column;
+    }
+
+    #about-product iframe {
+        align-self: center;
+        margin-top: 50px;
+        height: 200px; /* Ajuste la altura del iframe para smartphones */
+        width: 100%; /* Ocupa todo el ancho disponible */
+        max-width: none; /* Restablece el ancho máximo */
+    }
 }
 
 /*Physiotherapist section**/
 
 #physiotherapist-services {
     background-color: rgb(255, 255, 255);
-    height: 48vw;
+    height: 850px;
     padding-top: 110px;
 }
-
-
 
 #physiotherapist-services .right{
     min-width: 50%;
@@ -605,11 +731,9 @@ section h1.title
 #physiotherapist-services .left{
 
     display: flex;
-
     color: black;
     min-width: 45%;
-    margin-left: 2vw;
-    margin-right: 0vw;
+
 }
 
 #physiotherapist-services .left .title{
@@ -622,7 +746,7 @@ section h1.title
 
 
 #physiotherapist-services .btn-rectangular{
-    padding:25px 60px;
+
     background-color: #007AF0;
     color: #ffffff;
     border-radius: 50px;
@@ -656,7 +780,6 @@ section h1.title
     padding: 10px;
     border-radius: 5px;
     overflow: hidden;
-    cursor: pointer;
 }
 
 
@@ -664,7 +787,6 @@ section h1.title
     display: flex;
     justify-content: space-between;
     align-items: center; /* Alinea verticalmente el contenido en el centro */
-    cursor: pointer;
 
 }
 
@@ -705,13 +827,135 @@ section h1.title
     list-style: inherit;
 }
 
+/* Estilos para pantallas grandes (más de 1300px) */
+@media (max-width: 1300px) and (min-width: 800px) {
+
+    #physiotherapist-services{
+        height: 780px;
+    }
+
+    #physiotherapist-services .box{
+        width: 380px;
+
+    }
+
+    #physiotherapist-services .container {
+        flex-direction: column;
+        align-items: start;
+        justify-content: left;
+    }
+
+    #physiotherapist-services .right {
+        min-width: 100%;
+        margin-left: 300px;
+    }
+
+    #physiotherapist-services .right img {
+        width: 430px; /* Ajusta el tamaño de la imagen */
+        height: 600px; /* Mantén la proporción */
+        margin: 0 auto; /* Centra la imagen horizontalmente */
+    }
+
+    #physiotherapist-services .left {
+        min-width: 100%;
+        text-align: start;
+    }
+
+    #physiotherapist-services .left .title{
+        font-size:45px;
+
+    }
+
+    #physiotherapist-services .btn-rectangular {
+        margin-left: 0; /* Elimina el margen izquierdo */
+    }
+
+    /* Estilos para los elementos expandibles */
+    .expanding-item {
+        width: 100%; /* Ajusta el ancho de los elementos expandibles */
+        padding: 10px;
+    }
+
+    .expand-button {
+        margin-left: auto; /* Mueve el botón al extremo derecho */
+
+    }
+
+    .feature-title{
+        font-size: 18px;
+    }
+
+    .expanding-content{
+        font-size: 14px;
+    }
+}
+
+/* Estilos para pantallas pequeñas (menos de 800px) */
+@media (max-width: 800px) and (min-width: 200px) {
+
+    #physiotherapist-services{
+        height: 1200px;
+    }
+
+    #physiotherapist-services .box{
+        width: 500px;
+        display: table-column;
+        align-content: start;
+    }
+
+    #physiotherapist-services .container {
+        align-items: center;
+        justify-content: center;
+    }
+    #physiotherapist-services .right{
+
+    }
+
+    #physiotherapist-services .right img {
+        margin-top: 50px;
+        width: 300px; /* Ajusta el tamaño de la imagen al ancho de la pantalla */
+        height: 350px;
+        border-radius: 20px;
+
+    }
+
+    #physiotherapist-services .left {
+      width: 300px;
+    }
+
+    #physiotherapist-services .left .title{
+        font-size:35px;
+
+    }
+
+
+    #physiotherapist-services .btn-rectangular {
+
+        width: 70px;
+        height:20px;
+        font-size: 14px;
+
+    }
+
+    /* Estilos para los elementos expandibles */
+    .expanding-item {
+        width: 400px; /* Ajusta el ancho de los elementos expandibles */
+        padding: 10px;
+    }
+
+    .expand-button {
+        margin-left: auto; /* Mueve el botón al extremo derecho */
+
+    }
+}
+
 
 /*Testimonials*/
 
 #testimonials h1 {
     text-align: center;
     padding-top: 60px;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
     color: #007AF0;
     font-weight: bold;
     font-size: 40px;
@@ -771,17 +1015,85 @@ section h1.title
     right: 20px;
 }
 
-@media screen and (max-width: 768px) {
-    .name {
-        font-size: 15px;
+/* Estilos para pantallas grandes (más de 1300px) */
+@media (max-width: 1300px) and (min-width: 800px) {
+    #testimonials h1 {
+        font-size: 36px; /* Reduce el tamaño del título */
+        margin-top: 40px; /* Ajusta el espacio superior */
+        margin-bottom: 60px;
     }
-    .slide-content{
-        margin: 0 10px;
+    #testimonials {
+        height: 700px;
     }
-    .swiper-navBtn{
-        display: none;
+
+    .testimonial-card {
+        width: calc(50% - 100px); /* Dos columnas en pantalla grande */
+        height: 200px;
+        margin: 10px; /* Espacio entre las tarjetas */
+    }
+
+    .testimonial-content {
+        position: static; /* Coloca el contenido en su posición original */
+        margin-top: 70px;
+        margin-left: 50px;
+        text-align: center; /* Centra el texto */
+    }
+
+    .testimonial-content p {
+        font-size: 16px; /* Reduce el tamaño del texto */
+        margin-bottom: 10px;
+    }
+
+    .testimonial-name {
+        font-weight: bold;
+        margin: 0 auto; /* Centra el nombre horizontalmente */
+        color: #007AF0;
+    }
+
+    .testimonial-avatar {
+        width: 40px;
+        height: 40px;
     }
 }
+
+/* Estilos para pantallas pequeñas (menos de 800px) */
+@media (max-width: 800px) and (min-width: 200px) {
+    #testimonials h1 {
+        font-size: 28px; /* Reduce aún más el tamaño del título */
+        margin-top: 20px; /* Ajusta el espacio superior */
+        margin-bottom: 40px;
+    }
+
+    .testimonial-card {
+        width: calc(100% - 20px); /* Una columna en pantalla pequeña */
+        height: 150px; /* Ajusta la altura automáticamente */
+        margin-bottom: 20px;
+    }
+
+    .testimonial-content {
+        position: static; /* Coloca el contenido en su posición original */
+        margin-top: 60px;
+        margin-left: 50px;
+        text-align: center; /* Centra el texto */
+    }
+
+    .testimonial-content p {
+        font-size: 16px; /* Reduce el tamaño del texto */
+        margin-bottom: 10px;
+    }
+
+    .testimonial-name {
+        font-weight: bold;
+        margin: 0 auto; /* Centra el nombre horizontalmente */
+        color: #007AF0;
+    }
+
+    .testimonial-avatar {
+        width: 40px;
+        height: 40px;
+    }
+}
+
 
 /*About the TEam*/
 #about-the-team {
@@ -813,8 +1125,10 @@ section h1.title
 }
 
 .team-card {
-    width: calc(33.33% - 300px);
-    height: 400px;
+    min-width:258px;
+    max-width:258px;
+    width: calc(33.33% - 250px);
+    height: 350px;
     margin: 20px;
     background-color: #ffffff;
     border-radius: 40px;
@@ -824,8 +1138,8 @@ section h1.title
 
 
 .team-avatar {
-    width: 230px;
-    height: 250px;
+    width: 227px;
+    height: 200px;
     padding: 15px;
     border-radius: 20%;
 }
@@ -864,22 +1178,79 @@ section h1.title
     margin-top: 20px;
 }
 
-@media (max-width: 800px) and (min-width:200px) {
-
-    #about-team .team-div{
-        display: flex;
-        flex-direction: column;
+/* Estilos para pantallas grandes (más de 1300px) */
+@media (max-width: 1300px) and (min-width: 800px) {
+    #about-the-team h1 {
+        font-size: 36px; /* Reduce el tamaño del título */
     }
+
+    .team-card {
+        min-width:272px;
+        max-width:272px;
+        width: calc(25% - 20px); /* Cuatro columnas en pantalla grande */
+        height: 330px;
+    }
+
+    .team-avatar {
+        width: 240px; /* Reduce el tamaño de las imágenes de perfil */
+        height: 200px;
+    }
+
+    .team-name,
+    .team-position {
+        font-size: 16px; /* Reduce el tamaño del texto */
+        margin-left: 20px;
+    }
+
+    .team-social-icons {
+        margin-left: 20px;
+    }
+
+    .social-icon {
+        width: 20px; /* Reduce el tamaño de los íconos sociales */
+        height: 20px;
+    }
+
     #about-team iframe {
-        height: 150px;
-        width: 300px;
-        margin-top: 25px;
+        height: 200px; /* Ajusta el tamaño del iframe */
+        width: 350px;
     }
 }
-@media (max-width: 1300px) and (min-width:800px) {
+
+/* Estilos para pantallas pequeñas (menos de 800px) */
+@media (max-width: 800px) and (min-width: 200px) {
+    #about-the-team h1 {
+        font-size: 28px; /* Reduce aún más el tamaño del título */
+    }
+
+    .team-card {
+        min-width:239px;
+        max-width:239px;
+        width: calc(40% - 20px); /* Dos columnas en pantalla pequeña */
+        height: 280px;
+    }
+
+    .team-avatar {
+        width: 207px; /* Reduce el tamaño de las imágenes de perfil */
+        height: 150px;
+    }
+
+    .team-name,
+    .team-position {
+        font-size: 14px; /* Reduce el tamaño del texto */
+    }
+
+    .team-social-icons {
+    }
+
+    .social-icon {
+        width: 18px; /* Reduce el tamaño de los íconos sociales */
+        height: 18px;
+    }
+
     #about-team iframe {
-        height: 250px;
-        width: 450px;
+        height: 150px; /* Ajusta el tamaño del iframe */
+        width: 300px;
     }
 }
 
